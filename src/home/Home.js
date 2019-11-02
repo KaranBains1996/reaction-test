@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './Home.module.scss';
 import metric from './metrics.svg';
 import Button from '@material-ui/core/Button';
 
-class Home extends Component {
-    render() {
-        console.log(this.props);
+const home = (props) => {
+        const {start} = props;
         return (
             <div className={styles.wrapper}>
                 <h1 className={styles.heading}>Test your reflexes</h1>
@@ -15,14 +14,13 @@ class Home extends Component {
                     </p>
                     <img src={metric} alt="metrics" className={styles.illus} />
                     <div className={styles['btn-ctn']}>
-                        <Button variant="contained" color="primary" className={styles.btn} onClick={() => this.props.start()}>
-                            Hello World
+                        <Button variant="contained" color="primary" className={styles.btn} onClick={() => start()}>
+                            Start Test
                         </Button>
                     </div>
                 </div>
             </div>
-        )
-    }
+        );
 }
 
-export default Home;
+export default home;

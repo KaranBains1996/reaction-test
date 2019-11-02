@@ -1,5 +1,5 @@
 {
-  "name": "reflex-test",
+  "name": "reaction-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,7 +7,8 @@
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "statman-stopwatch": "^2.11.1"
   },
   "scripts": {
     "start": "react-scripts start",

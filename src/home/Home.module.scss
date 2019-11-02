@@ -7,6 +7,8 @@
 .wrapper {
     height: 100%;
     width: 100%;
+    padding: 5% 10%;
+
 
     .heading {
         @include center-all;
@@ -47,6 +49,7 @@
         .heading {
             font-size: 40px;
         }
+
         .content {
             .p {
                 margin: 0;
