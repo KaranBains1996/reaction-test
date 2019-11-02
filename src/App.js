@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Home from './home/Home';
+import Game from './game/Game';
+import styles from './App.module.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends Component {
+  state = { inGame: false };
+
+  startHandler = () => {
+    this.setState({
+      inGame: true
+    });
+  }
+
+  render() {
+    let AppBody = null;
+    if (!this.state.inGame) {
+      AppBody = (<Home start={this.startHandler} />)
+    } else {
+      AppBody = (<Game />)
+    }
+    return (
+      <div
+        className={styles.App}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        {AppBody}
+      </div>
+    );
+  }
 }
 
 export default App;

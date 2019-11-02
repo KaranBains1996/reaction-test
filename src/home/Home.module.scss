@@ -1,0 +1,58 @@
+@mixin center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+
+    .heading {
+        @include center-all;
+        font-size: 60px;
+        height: 20%;
+    }
+
+    .content {
+        height: 80%;
+
+        .p {
+            font-size: 18px;
+            margin: auto;
+            height: 20%;
+            width: 60%;
+            @include center-all;
+        }
+
+        .illus {
+            height: 60%;
+            width: 100%;
+        }
+
+        .btn-ctn {
+            height: 20%;
+            @include center-all;
+
+            .btn {
+                background-color: #41B883;
+            }
+        }
+    }
+}
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 650px) {
+    .wrapper {
+        .heading {
+            font-size: 40px;
+        }
+        .content {
+            .p {
+                margin: 0;
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    }
+}
