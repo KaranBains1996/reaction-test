@@ -7,7 +7,7 @@ const home = (props) => {
         const {start} = props;
         return (
             <div className={styles.wrapper}>
-                <h1 className={styles.heading}>Test your reflexes</h1>
+                <h1 className={styles.heading}>Test your reactions</h1>
                 <div className={styles.content}>
                     <p className={styles.p}>
                         Check how fast your reactions are by putting them through a small test. This test measures how fast you can react irregular changes.
