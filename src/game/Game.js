@@ -74,7 +74,7 @@ class Game extends Component {
           <DialogTitle id="alert-dialog-title">{"Rules"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              Tap the red tiles as soon as they appear. Press OK when you are ready.
+              Tap the <span className={styles.blue}>blue</span> tiles as soon as they appear. Press OK when you are ready.
             </DialogContentText>
           </DialogContent>
           <DialogActions>
